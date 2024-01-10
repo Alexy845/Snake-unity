@@ -31,6 +31,6 @@ public class M : MonoBehaviour
             gridPosition.x += 1;
         }
 
-        transform.position = new Vector3(gridPosition.x, gridPosition.y);
+        transform.position = new Vector2(gridPosition.x, gridPosition.y);
     }
 }
