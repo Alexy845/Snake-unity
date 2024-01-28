@@ -5,18 +5,12 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     [SerializeField] float speed;
-    enum Direction { Up, Right, Down, Left};
-
-    Direction direction = Direction.Up;
-
-    [SerializeField] float distance;
-    [SerializeField] float sequence;
-
-
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Moving", 0.5f, sequence);
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(speed, 0);
     }
 
     // Update is called once per frame
@@ -24,59 +18,22 @@ public class Move : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Translate(Vector2.up * speed * Time.deltaTime);
-            if(direction != Direction.Down)
-            {
-                direction = Direction.Up;
-            }
+            rb.velocity = new Vector2(0, speed);
         }
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(Vector2.down * speed * Time.deltaTime);
-            if (direction != Direction.Up)
-            {
-                direction = Direction.Down;
-            }
+            rb.velocity = new Vector2(0, -speed);
+
         }
         else if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-            if (direction != Direction.Right)
-            {
-                direction = Direction.Left;
-            }
+            rb.velocity = new Vector2(-speed, 0);
 
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-            if (direction != Direction.Left)
-            {
-                direction = Direction.Right;
-            }
-        }
-    }
-    void Moving()
-    {
-        switch(direction)
-        {
-            case Direction.Up:
-                transform.Translate(Vector2.up * distance);
-                break;
-            case Direction.Left:
-                transform.Translate(Vector2.left * distance);
-                break;
-            case Direction.Right:
-                transform.Translate(Vector2.right * distance);
-                break;
-            case Direction.Down:
-                transform.Translate(Vector2.down * distance);
-                break;
-        }
-    }
+            rb.velocity = new Vector2(speed, 0);
 
-    public void Stop()
-    {
-        CancelInvoke("Moviendo");
+        }
     }
 }

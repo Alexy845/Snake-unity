@@ -8,11 +8,11 @@ using UnityEngine.UI;
 public class Colisions : MonoBehaviour
 {
     [SerializeField] Score scoreText;
+    //[SerializeField] Tails snake;
 
     [SerializeField] SpawnFood spawnFood;
     [SerializeField] GameManager gameManager;
 
-    Move moving;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Food"))
@@ -21,6 +21,7 @@ public class Colisions : MonoBehaviour
             scoreText.ScoreUp();
             //Destroy(collision.gameObject);
             collision.gameObject.SetActive(false);
+            //snake.Grow();
             spawnFood.Comit();
         }
 
@@ -30,8 +31,7 @@ public class Colisions : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Border"))
         {
-            //Debug.Log("GameOver");
-            moving.Stop();
+            
             SceneManager.LoadScene(1);
 
         }
