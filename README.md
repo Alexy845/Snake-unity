@@ -55,11 +55,27 @@ The player plays a snake that can can only change direction to eat apples and su
 
 ### Game Loop
 
-1. survive as long as possible
+#### Primary
 
-2. to dodge
+1. Survive the dangers
 
-3. continue to increase your score
+2. Eat the food
+
+3. Be the best player with the highest score
+
+#### Minor
+
+1.1 Survive as long as possible
+
+2.1 To dodge
+
+3.1 Continue to increase your score
+
+1.2 Survive
+
+2.2 Eat apples
+
+3.2 See your snake grow
 
 ### pillars
 
