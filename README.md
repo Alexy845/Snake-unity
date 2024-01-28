@@ -33,15 +33,41 @@ And enjoy the game.
 
 You'll start each game with one green and one red square. The green square is your snake and the red is an apple. Move the snake around the screen and eat as many apples as you can until the screen is full of the snake's body. Each time an apple is eaten, the snake will grow.
 
-### Controls
-⬆️ Use the up arrow key to move up
+### 3C
 
-⬇️ Use the down arrow key to move down
+#### Camera
 
-➡️ Use the right arrow key to move right
+The camera does not move, it remains fixed with a top view.
 
-⬅️ Use the left arrow key to move left
+#### Controls
 
+- ⬆️ Use the up arrow key to move up
+
+- ⬇️ Use the down arrow key to move down
+
+- ➡️ Use the right arrow key to move right
+
+- ⬅️ Use the left arrow key to move left
+
+#### Character
+
+The player plays a snake that can can only change direction to eat apples and survive as long as possible.
+
+### Game Loop
+
+1. survive as long as possible
+
+2. to dodge
+
+3. continue to increase your score
+
+### pillars
+
+- apples
+
+- growth
+
+- score
 
 ## 📰 Upgrades planned
 
