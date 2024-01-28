@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
-  snake: {fileID: 0}
   spawnFood: {fileID: 0}
   gameManager: {fileID: 0}
 --- !u!50 &7699430084384451585

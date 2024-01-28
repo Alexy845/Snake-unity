@@ -11,6 +11,18 @@ public class Options : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void Level3()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+
     public void MainMenu()
     {
         SceneManager.LoadScene(1);
